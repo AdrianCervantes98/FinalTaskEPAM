@@ -44,10 +44,10 @@ steps:
   - --max-instances
   - '2'
   env:
-  - 'INSTANCE_CONNECTION_NAME=$PROJECT_ID:us-west4:test-nuka-cola'
+  - 'INSTANCE_CONNECTION_NAME=$PROJECT_ID:us-west4:test-nuka-cola1'
   - 'DB_USER=$$user'
   - 'DB_PASS=$$db_pass'
-  - 'DB_NAME=rookie'
+  - 'DB_NAME=land_registry_price_paid_uk'
   secretEnv: ['db_pass', 'user']
   waitFor: ['installer']
 
