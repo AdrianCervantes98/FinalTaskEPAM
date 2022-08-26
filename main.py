@@ -5,9 +5,10 @@ from flask import Flask
 app = Flask(__name__)
 
 def init_unix_connection_engine(**db_config):
+    db_name = os.environ["DB_NAME"]
     db_user = os.environ["DB_USER"]
     db_pass = os.environ["DB_PASS"]
-    db_name = os.environ["DB_NAME"]
+    
     
     db_socket_dir = os.environ.get("DB_SOCKET_DIR", "/cloudsql")
     
