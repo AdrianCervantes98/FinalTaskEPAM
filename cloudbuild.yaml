@@ -43,11 +43,11 @@ steps:
   - '8080'
   - --max-instances
   - '2'
-  env:
-  - 'INSTANCE_CONNECTION_NAME=$PROJECT_ID:us-west4:test-nuka-cola1'
-  - 'DB_NAME=land_registry_price_paid_uk'
   secretEnv: ['DB_PASS', 'DB_USER']
   waitFor: ['installer']
+
+options:
+  env: ['INSTANCE_CONNECTION_NAME=$PROJECT_ID:us-west4:test-nuka-cola1', 'DB_NAME=land_registry_price_paid_uk']
 
 availableSecrets:
   secretManager:
