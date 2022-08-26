@@ -8,11 +8,14 @@ def init_unix_connection_engine(**db_config):
     db_name = os.environ["DB_NAME"]
     db_user = os.environ["DB_USER"]
     db_pass = os.environ["DB_PASS"]
-    
+    print(db_name)
+    print(db_user)
+    print(db_pass)
     
     db_socket_dir = os.environ.get("DB_SOCKET_DIR", "/cloudsql")
     
     cloud_sql_connection_name = os.environ["CLOUD_SQL_CONNECTION_NAME"]
+    print(cloud_sql_connection_name)
     
     pool = sqlalchemy.create_engine(
         sqlalchemy.engine.url.URL(
