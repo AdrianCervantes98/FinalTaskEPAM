@@ -44,13 +44,7 @@ steps:
   - --max-instances
   - '2'
   - --set-env-vars
-  - DB_NAME='land_registry_price_paid_uk'
-  - --set-env-vars
-  - DB_USER=$$user
-  - --set-env-vars
-  - DB_PASS=$$db_pass
-  env:
-  - 'INSTANCE_CONNECTION_NAME=$PROJECT_ID:us-west4:test-nuka-cola1'
+  - DB_NAME='land_registry_price_paid_uk', DB_USER=$$user, DB_PASS=$$db_pass, CLOUD_SQL_CONNECTION_NAME='$PROJECT_ID:us-west4:test-nuka-cola1'
   secretEnv: ['db_pass', 'user']
   waitFor: ['installer']
 
